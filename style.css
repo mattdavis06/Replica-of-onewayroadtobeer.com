@@ -212,6 +212,10 @@ body {
     color: #8A65DD;
 }
 
+.modal-content .github-logo {
+    font-size: 40px;
+}
+
 @media (max-width: 930px) {
     html, 
     body    {
