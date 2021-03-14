@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap');
+
+*, 
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    font-family: 'Work Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    font-weight: 300;
+    overflow: hidden;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.nav-icon {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-icon ion-icon {
+    font-size: 35px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.grid-layout {
+    width: 100vw;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid {
+    padding: 30px;
+    position: relative;
+}
+
+.grid h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+}
+
+.grid div > span {
+    font-size: 1rem;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.grid.active p {
+    width: 100%;
+}
+
+.grid.active span {
+    display: flex;
+}
+
+.grid.active .lrg-number {
+    font-size: 6.5rem;
+    margin: 0px 10px 10px 0;
+    letter-spacing: 2px;
+}
+
+.grid-one {
+    grid-area: one / one / one / one;
+    background-color: #FC5A2A;
+}
+
+.grid-two {
+    background-color:#FA9BBE;
+    grid-area: two / two / two / two;
+}
+
+.grid-three {
+    background-color: #93D0AC;
+    grid-area: three / three / three / three;
+}
+
+.grid-four { 
+    background-color: #FFB611;
+    grid-area: four / four / four / four;
+}
+
+.grid-five {
+    background-color: #8965DD;
+    grid-area: five / five / five / five;
+}
+
+.grid.box h3 {
+    width: 50%;
+    white-space: pre-wrap;
+}
+
+.grid.box .days {
+    font-size: 3.5rem;
+}
+
+.grid.box .days > span {
+    margin-left: 10px;
+}
+
+.grid .stage {
+    color: #000;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid .stage .stage-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.grid .stage .stage-number {
+    margin-left: 5px;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 20;
+    transition: opacity 0.4s ease;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease;
+}
+
+.modal .close-icon {
+    background-color: #8A65DD;
+    color: #fff;
+    height: 100vh;
+    width: 70px;
+    text-align: center;
+    z-index: 20;
+}
+
+.modal .close-icon ion-icon {
+    font-size: 30px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.modal .modal-content {
+    padding: 50px;
+    width: 50%;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+   
+}
+
+.modal-content h4 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: #8A65DD;
+    margin-bottom: 40px;
+}
+
+.modal-content p {
+    margin: 40px 0;
+    font-size: 1.2rem;
+}
+
+.modal-content a {
+    color: #8A65DD;
+    text-decoration: none;
+}
+
+.modal-content a:focus {
+    outline: none;
+}
+
+.modal-content a:hover,
+.modal-content a:visited {
+    color: #8A65DD;
+}
+
+@media (max-width: 930px) {
+    html, 
+    body    {
+    overflow: auto;
+    }
+
+    .wrapper {
+        display: block;
+    }
+    .nav-icon {
+        justify-content: flex-start;
+        align-items: center;
+        height: 100px;
+        width: 100%;
+    }
+
+    .nav-icon ion-icon {
+        padding-left: 30px;
+    }
+
+    .grid-layout {
+        display: block;
+    }
+
+    .grid.active .lrg-number {
+        font-size: 4.5rem;
+
+    }
+    .grid h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 1px;
+        width: 80%;
+    }
+
+    .grid .stage {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .grid.active span {
+        margin-bottom: 20px;
+    }
+    
+    .grid .stage .stage-text {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+    
+    .modal .modal-content {
+        width: 90%;
+    }
+
+   
+}
