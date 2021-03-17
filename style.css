@@ -265,7 +265,7 @@ body {
 
     .modal {
         overflow: auto;
-        -webkit-overflow-scrolling: touch;
+    }
     
     .modal .modal-content {
         width: 90%;
