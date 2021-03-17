@@ -11,35 +11,33 @@
 html, 
 body {
     font-family: 'Work Sans', sans-serif;
-    height: 100vh;
-    width: 100vw;
     font-weight: 300;
     overflow: hidden;
 }
 
 .wrapper {
     display: flex;
+    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 .nav-icon {
     background-color: #000;
     color: #fff;
-    height: 100vh;
-    width: 70px;
     display: flex;
     justify-content: center;
-    position: relative;
+
     z-index: 10;
 }
 
 .nav-icon ion-icon {
     font-size: 35px;
-    margin: 20px 0;
+    margin: 20px 10px;
     cursor: pointer;
 }
 
 .grid-layout {
-    width: 100vw;
     flex-wrap: wrap;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -105,7 +103,6 @@ body {
 
 .grid.box h3 {
     width: 50%;
-    white-space: pre-wrap;
 }
 
 .grid.box .days {
@@ -141,11 +138,12 @@ body {
 .modal {
     width: 100%;
     height: 100%;
+
     background-color: #000;
     color: #fff;
     display: flex;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     opacity: 0;
@@ -162,15 +160,14 @@ body {
 .modal .close-icon {
     background-color: #8A65DD;
     color: #fff;
-    height: 100vh;
-    width: 70px;
-    text-align: center;
-    z-index: 20;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
 }
 
-.modal .close-icon ion-icon {
-    font-size: 30px;
-    margin: 20px 0;
+.modal .close-icon  ion-icon {
+    font-size: 35px;
+    margin: 20px 10px;
     cursor: pointer;
 }
 
@@ -216,32 +213,33 @@ body {
     font-size: 40px;
 }
 
-@media (max-width: 930px) {
-    html, 
-    body    {
-    overflow: auto;
-    }
+@media screen and (max-width: 930px) {
 
+    html,   
+    body {
+    overflow: scroll;
+}
     .wrapper {
-        display: block;
+        display: inline-block;
+        width: 100%;
     }
     .nav-icon {
         justify-content: flex-start;
         align-items: center;
-        height: 100px;
-        width: 100%;
     }
 
     .nav-icon ion-icon {
-        padding-left: 30px;
+        padding-left: 0;
+        margin: 20px;
     }
 
     .grid-layout {
-        display: block;
+        display: inline-block;
+        width: 100%;
     }
 
     .grid.active .lrg-number {
-        font-size: 4.5rem;
+        font-size: 4.2rem;
 
     }
     .grid h3 {
@@ -257,7 +255,7 @@ body {
     }
 
     .grid.active span {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     
     .grid .stage .stage-text {
@@ -268,6 +266,33 @@ body {
     .modal .modal-content {
         width: 90%;
     }
+   
+}
 
+@media screen and (max-width: 520px) {
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content h4 {
+        font-size: 1.8rem;
+    }
+   
+}
+
+@media screen and (max-width: 440px) {
+
+    .modal-content h2 {
+        font-size: 1rem;
+    }
+
+    .modal-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content p {
+        font-size: 1.1rem;
+    }
    
 }
