@@ -220,6 +220,7 @@ body {
 }
     .wrapper {
         display: flow-root;
+        height: auto;
     }
     .nav-icon {
         justify-content: flex-start;
@@ -250,6 +251,10 @@ body {
     .grid .stage {
         right: 10px;
         bottom: 10px;
+    }
+
+    .grid.box h3 {
+        width: 100%;
     }
 
     .grid.active span {
