@@ -215,7 +215,7 @@ body {
 
     html,   
     body {
-    overflow-y: auto;
+    overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
     .wrapper {
@@ -332,7 +332,6 @@ body {
         font-size: 2rem;
     }
      
-    
     .modal-content h2 {
         font-size: 1rem;
     }
