@@ -170,7 +170,6 @@ function updateClockCoutdown() {
 
     }
 
-
     if(stageOneA && stageOneB && stageTwo && stageThree && stageFour < currentDate) {
         const tempArea = '"one two three" "four five five"'
         removeActiveClass()
