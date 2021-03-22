@@ -281,7 +281,7 @@ body {
     .modal {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        height: auto;
+        height: 100%;
     }
     
     .modal .modal-content {
