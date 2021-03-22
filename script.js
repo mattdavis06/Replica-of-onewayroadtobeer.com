@@ -25,6 +25,8 @@ stageTwo = new Date('April 12, 2021 00:00:00'),
 stageThree = new Date('May 17, 2021 00:00:00'),
 stageFour = new Date('June 21 ,2021 00:00:00').getTime()
 
+
+
 function fullTimeRemaining(stage, countdown, templateArea) {
 
     const currentDate = new Date()
@@ -75,7 +77,7 @@ function addActiveClass(countdown) {
 
 function setStageComplete(countdown) {
    
-    const completedStageIcon = countdown.nextElementSibling.lastElementChild
+    const completedStageIcon = countdown.parentNode.children[2].children[0].lastElementChild
     const completedStageText = completedStageIcon.parentNode
     
     completedStageIcon.innerHTML = `
