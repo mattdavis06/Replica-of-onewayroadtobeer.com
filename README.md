@@ -1,7 +1,7 @@
 # Replica-of-onewayroadtobeer.com
 Replica site of the site onewayroadtobeer.com
 
-https://vigilant-jepsen-13a95f.netlify.app/
+https://replica-lockdown-countdown.netlify.app/
 
 This is my first proper app that I've built using HTML, CSS, JS and my first ever commit to GitHub.
 
