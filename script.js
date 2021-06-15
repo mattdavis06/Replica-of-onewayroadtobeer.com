@@ -18,12 +18,13 @@ closeIcon.addEventListener('click', () => {
 })
 
 const currentDate = new Date()
+// const currentDate = new Date('March 12, 2021 00:00:00')
 
 const stageOneA = new Date ('March 8, 2021 00:00:00'),
 stageOneB = new Date('March 29, 2021 00:00:00'),
 stageTwo = new Date('April 12, 2021 00:00:00'),
 stageThree = new Date('May 17, 2021 00:00:00'),
-stageFour = new Date('June 21 ,2021 00:00:00').getTime()
+stageFour = new Date('July 19 ,2021 00:00:00').getTime()
 
 
 
@@ -62,7 +63,7 @@ function daysRemaining(stage, countdown) {
 }
 
 function removeActiveClass() {
-    gridDiv.forEach((div) => {
+    gridDiv.forEach(div => {
         if(div.classList.contains('active')) {
             div.classList.remove('active')
         }
